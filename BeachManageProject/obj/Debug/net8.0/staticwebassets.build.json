@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sVQrxCyGvrHtnZMg/443/bJVMkAijsZd3ZuxJ3sczmo=",
+  "Hash": "wCZ3dSdBGKZJQC9UKCi3JEjz5SusoJqraSLVXJZXGKM=",
   "Source": "BeachManage",
   "BasePath": "_content/BeachManage",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\test mvc\\BeachManage\\BeachManageProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BeachManage.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\Dashboardstyle.css",
+      "SourceId": "BeachManage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\",
+      "BasePath": "_content/BeachManage",
+      "RelativePath": "css/Dashboardstyle.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Dashboardstyle.css"
     },
     {
       "Identity": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\site.css",
