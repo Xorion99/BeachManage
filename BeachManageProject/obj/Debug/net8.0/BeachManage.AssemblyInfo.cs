@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BeachManage")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbb59cfe2f9c266772adf01f8d170021e1039e64")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f74b1f187ed1b6b0d2523f594893cac6d74c785")]
 [assembly: System.Reflection.AssemblyProductAttribute("BeachManage")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BeachManage")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
