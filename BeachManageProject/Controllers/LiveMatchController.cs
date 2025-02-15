@@ -141,9 +141,41 @@ namespace BeachManage.Controllers
 
 
         // GET: DashBoard/Details/5
-        public ActionResult Details(int id)
+        public ActionResult GetStats(int IdPlayer, int IdMatch)
         {
-            return View();
+            var stats = _context.Stattypes
+                               .Select(s => new { s.Id, s.Description })
+                               .ToList();
+
+            return Json(stats);
+        }
+
+        public ActionResult AddStats(int IdPlayer, int IdMatch, int Idstat)
+        {
+
+            var statistica = _context.Playerstats.Where(x => x.MatchId == IdMatch && x.PlayerId == IdPlayer && x.StatTypeId == Idstat && x.DateDeleteFromApp == null).FirstOrDefault();
+
+            if(statistica != null)
+            {
+                statistica.StatValue++;
+                _context.SaveChanges();
+
+            }
+            else
+            {
+                Playerstat playerstat = new Playerstat
+                {
+                    MatchId = IdMatch,
+                    PlayerId = IdPlayer,
+                    StatTypeId = Idstat,
+                    StatValue = 1,
+                    DateInsert = DateTime.Now,
+                };
+                _context.Playerstats.Add(playerstat);
+                _context.SaveChanges();
+            }
+
+            return Json("OK");
         }
 
         // GET: DashBoard/Create

@@ -16,26 +16,52 @@
                 <div class="card-body">
                     <h5 id="score-team1">Punteggio: @Model.Team1Score</h5>
                     <div class="btn-group-vertical w-100">
-                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(1, '@Model.GiocatoreTeam1Uno','@Model.PlayerIdUnoTeamUno')">@Model.GiocatoreTeam1Uno</button>
-                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(2, '@Model.GiocatoreTeam1Due','@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due</button>
+                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(1, '@Model.GiocatoreTeam1Uno','@Model.PlayerIdUnoTeamUno')">@Model.GiocatoreTeam1Uno 👊</button>
+                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(2, '@Model.GiocatoreTeam1Due','@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due ⚡</button>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="col-12 col-md-5">
-            <div class="card">
+            <div class="card mt-4 mt-md-0">
                 <div class="card-header bg-danger text-white">
                     <h4>@Model.Team2.Name</h4>
                 </div>
                 <div class="card-body">
                     <h5 id="score-team2">Punteggio: @Model.Team2Score</h5>
                     <div class="btn-group-vertical w-100">
-                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(3, '@Model.GiocatoreTeam2Uno','@Model.PlayerIdUnoTeamDue')">@Model.GiocatoreTeam2Uno</button>
-                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(4, '@Model.GiocatoreTeam2Due','@Model.PlayerIdDueTeamDue')">@Model.GiocatoreTeam2Due</button>
+                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(3, '@Model.GiocatoreTeam2Uno','@Model.PlayerIdUnoTeamDue')">@Model.GiocatoreTeam2Uno 💪</button>
+                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(4, '@Model.GiocatoreTeam2Due','@Model.PlayerIdDueTeamDue')">@Model.GiocatoreTeam2Due 🔥</button>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Box Aggiungi Statistica -->
+    <div class="row mt-5">
+        <div class="col-12 text-center">
+            <div class="card p-3 shadow">
+                <h4>Aggiungi Statistica 🏅</h4>
+                <div class="btn-group w-100">
+                    <button type="button" class="btn btn-info m-1" onclick="openStatsPopup('@Model.GiocatoreTeam1Uno', '@Model.PlayerIdUnoTeamUno')">@Model.GiocatoreTeam1Uno 👟</button>
+                    <button type="button" class="btn btn-info m-1" onclick="openStatsPopup('@Model.GiocatoreTeam1Due', '@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due 🎯</button>
+                    <button type="button" class="btn btn-info m-1" onclick="openStatsPopup('@Model.GiocatoreTeam2Uno', '@Model.PlayerIdUnoTeamDue')">@Model.GiocatoreTeam2Uno 🏃‍♂️</button>
+                    <button type="button" class="btn btn-info m-1" onclick="openStatsPopup('@Model.GiocatoreTeam2Due', '@Model.PlayerIdDueTeamDue')">@Model.GiocatoreTeam2Due 🏆</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup Statistiche -->
+    <div id="statsPopup" class="popup-overlay d-none">
+        <div class="popup-content">
+            <h4 id="popupTitle"></h4>
+            <input type="hidden" id="selectedPlayerId">
+            <div id="statsList" class="mt-3"></div>
+            <button class="btn btn-primary mt-3" onclick="confirmStat()">Conferma ✅</button>
+            <button class="btn btn-secondary mt-3" onclick="closeStatsPopup()">Chiudi ❌</button>
         </div>
     </div>
 
@@ -43,7 +69,7 @@
         <div class="col-12 text-center">
             <form method="post" asp-action="EndMatch">
                 <input type="hidden" name="matchId" value="@Model.MatchId" />
-                <button type="submit" class="btn btn-danger btn-lg">Termina Partita</button>
+                <button type="submit" class="btn btn-danger btn-lg">Termina Partita 🛑</button>
             </form>
         </div>
     </div>
@@ -51,15 +77,12 @@
 
 @section Scripts {
     <script>
-        
         function incrementScore(TeamId, playerName, playerId) {
-            debugger;
             $.ajax({
                 type: "POST",
-                url: '@Url.Action("IncrementScore")',  // Assicurati che questa sia la route giusta
+                url: '@Url.Action("IncrementScore")',
                 data: { Team: TeamId, MatchId: @Model.MatchId, PlayerId: playerId },
                 success: function (response) {
-                    // Aggiorna il punteggio per la squadra
                     if (TeamId === 1 || TeamId === 2) {
                         $('#score-team1').text('Punteggio: ' + response.team1Score);
                     } else {
@@ -71,5 +94,96 @@
                 }
             });
         }
+
+        function openStatsPopup(playerName, playerId) {
+            $("#popupTitle").text("Seleziona una statistica per " + playerName);
+            $("#selectedPlayerId").val(playerId);
+            $("#statsList").html('<p>Caricamento...</p>');
+
+            $.ajax({
+                url: '@Url.Action("GetStats")',
+                type: 'GET',
+                data: { IdPlayer: playerId, IdMatch: @Model.MatchId },
+                success: function (data) {
+                    let statsHtml = "";
+                    data.forEach(stat => {
+                        statsHtml += `<button class="btn btn-light w-100 mb-2" onclick="selectStat(${stat.id}, '${stat.description}')">${stat.description}</button>`;
+                    });
+                    $("#statsList").html(statsHtml);
+                },
+                error: function () {
+                    $("#statsList").html('<p>Errore nel recupero delle statistiche</p>');
+                }
+            });
+
+            $("#statsPopup").removeClass("d-none");
+        }
+
+        function selectStat(statId, description) {
+            $("#statsList button").removeClass("btn-primary").addClass("btn-light");
+            $(`#statsList button:contains(${description})`).addClass("btn-primary");
+            $("#statsPopup").data("selectedStatId", statId);
+        }
+
+        function confirmStat() {
+            const playerId = $("#selectedPlayerId").val();
+            const statId = $("#statsPopup").data("selectedStatId");
+
+            if (!statId) {
+                alert("Seleziona una statistica!");
+                return;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("AddStats")',
+                data: { IdPlayer: playerId, IdMatch: @Model.MatchId, Idstat: statId },
+                success: function (data) {
+                    console.log("Statistiche aggiornate:", data);
+                    closeStatsPopup(); // Chiude il popup dopo la chiamata
+                },
+                error: function () {
+                    alert("Errore durante l'aggiunta della statistica.");
+                }
+            });
+        }
+
+        function closeStatsPopup() {
+            $("#statsPopup").addClass("d-none");
+        }
     </script>
 }
+
+<style>
+    body{
+        background-color: navajowhite;
+    }
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .card {
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+</style>
