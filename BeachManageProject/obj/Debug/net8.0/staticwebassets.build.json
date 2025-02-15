@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wCZ3dSdBGKZJQC9UKCi3JEjz5SusoJqraSLVXJZXGKM=",
+  "Hash": "cNQyPZdgUsWmWoxSWLlyGiUrswvB5dxEcpBwbzMBOoE=",
   "Source": "BeachManage",
   "BasePath": "_content/BeachManage",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\test mvc\\BeachManage\\BeachManageProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BeachManage.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\arena.jpg",
+      "SourceId": "BeachManage",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\",
+      "BasePath": "_content/BeachManage",
+      "RelativePath": "css/arena.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\arena.jpg"
     },
     {
       "Identity": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\Dashboardstyle.css",

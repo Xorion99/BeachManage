@@ -1,71 +1,51 @@
-﻿/* FONTS - imported fonts need to be first */
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+﻿@import "https://fonts.googleapis.com/css?family=Press%20Start%202P";
 
-/* RESETS */
 * {
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-html {
-    font-size: 62.5%;
-    overflow-y: hidden;
-    overflow-x: hidden;
-}
-
-/* BODY */
+html,
 body {
-    background-image: url('locandina.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fafafa;
-    font-size: 3rem;
-    font-family: 'Press Start 2P', serif;
-}
-
-.wrapper {
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Press Start 2P";
+    font-size: 1rem;
+    line-height: 2;
+    height: 100%;
+    background-color: #221;
+    background-image: url(locandina.png);
+    text-transform: uppercase;
 }
 
-/* MENU */
-.menu {
-    list-style: none;
+a {
+    text-decoration: none;
+    color: white;
 }
 
-    .menu li {
-        padding: 1rem 0;
+li {
+    color: white;
+}
+
+.arrow i {
+    display: none;
+}
+
+.arrow {
+    position: relative;
+    display: block;
+    color: #f6eb14;
+}
+
+    .arrow:hover {
         cursor: pointer;
-        position: relative;
+        background-color: rgba(0, 0, 0, 0.2);
     }
 
-        .menu li.active {
-            color: #cccccc;
+        .arrow:hover i {
+            display: block;
+            position: absolute;
+            top: 0.5em;
+            left: -6em;
         }
-
-            .menu li.active::before {
-                content: '';
-                width: 40px;
-                height: 35px;
-                background-image: url('https://www.burtonmediainc.com/SVG/Heart.svg');
-                background-size: cover;
-                position: absolute;
-                transform: translate(-140%, -10%);
-                color: #d90707;
-            }
-
-/* MUSIC OPTIONS */
-.music-options {
-    opacity: 0;
-}
-
-    .music-options.show {
-        opacity: 1;
-    }
-
-    .music-options .active {
-        color: #fff;
-    }

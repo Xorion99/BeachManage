@@ -1,0 +1,7 @@
+﻿body {
+    background-image: url('arena.jpg');
+    background-size: cover; /* Fa sì che l'immagine copra tutta la pagina */
+    background-position: center; /* Posiziona l'immagine al centro della pagina */
+    background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll */
+    background-repeat: no-repeat; /* Impedisce che l'immagine si ripeta */
+}

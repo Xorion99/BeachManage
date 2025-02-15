@@ -8,9 +8,12 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\css\locandina.png" />
+    <Content Remove="wwwroot\css\NewMatchStyle.css" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\css\arena.jpg" />
+    <None Include="wwwroot\css\NewMatchStyle.css" />
     <None Include="wwwroot\css\Dashboardstyle.css" />
     <None Include="wwwroot\css\locandina.png" />
   </ItemGroup>

@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\Dashboardstyle.css"
     },
     {
+      "Id": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\arena.jpg",
+      "PackagePath": "staticwebassets\\css\\arena.jpg"
+    },
+    {
       "Id": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
