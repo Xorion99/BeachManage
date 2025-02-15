@@ -1,0 +1,116 @@
+﻿@model BeachManage.ViewModel.MatchDetailViewModel
+
+@{
+    ViewData["Title"] = "Dettaglio Partita";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-success">🏐 Dettaglio Partita 🏐 </h2>
+
+    <div class="row mt-4">
+        <!-- Team 1 Stats -->
+        <div class="col-12 col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4>@Model.Team1 🏆</h4>
+                </div>
+                <div class="card-body">
+                    <h5><i class="fas fa-user"></i> @Model.PlayerUnoTeam1</h5>
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Statistica</th>
+                                <th>Valore</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in Model.PlayerUnoTeamUnostat)
+                            {
+                                var statDescription = Model.StatTypes.FirstOrDefault(s => s.Id == stat.StatTypeId)?.Description ?? "Descrizione non trovata";
+                                <tr>
+                                    <td>@statDescription</td>
+                                    <td><strong>@stat.StatValue</strong></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <h5><i class="fas fa-user"></i> @Model.PlayerDueTeam1</h5>
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Statistica</th>
+                                <th>Valore</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in Model.PlayerDueTeamUnostat)
+                            {
+                                var statDescription = Model.StatTypes.FirstOrDefault(s => s.Id == stat.StatTypeId)?.Description ?? "Descrizione non trovata";
+                                <tr>
+                                    <td>@statDescription</td>
+                                    <td><strong>@stat.StatValue</strong></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team 2 Stats -->
+        <div class="col-12 col-md-6">
+            <div class="card mb-4">
+                <div class="card-header bg-danger text-white">
+                    <h4>@Model.Team2 🏅</h4>
+                </div>
+                <div class="card-body">
+                    <h5><i class="fas fa-user"></i> @Model.PlayerUnoTeam2</h5>
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Statistica</th>
+                                <th>Valore</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in Model.PlayerUnoTeamDuestat)
+                            {
+                                var statDescription = Model.StatTypes.FirstOrDefault(s => s.Id == stat.StatTypeId)?.Description ?? "Descrizione non trovata";
+                                <tr>
+                                    <td>@statDescription</td>
+                                    <td><strong>@stat.StatValue</strong></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+
+                    <h5><i class="fas fa-user"></i> @Model.PlayerDueTeam2</h5>
+                    <table class="table table-bordered table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Statistica</th>
+                                <th>Valore</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var stat in Model.PlayerDueTeamDuestat)
+                            {
+                                var statDescription = Model.StatTypes.FirstOrDefault(s => s.Id == stat.StatTypeId)?.Description ?? "Descrizione non trovata";
+                                <tr>
+                                    <td>@statDescription</td>
+                                    <td><strong>@stat.StatValue</strong></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Font Awesome for Icons -->
+@section Scripts {
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+}

@@ -26,7 +26,8 @@
                         <td><span class="badge bg-primary fs-5">@partita.Score1 - @partita.Score2</span></td>
                         <td><strong>@partita.NomeSquadra2</strong></td>
                         <td>
-                            <a asp-action="DettagliPartita" asp-route-id="@partita.IdMatch" class="btn btn-info btn-sm">🔍 Dettagli</a>
+                            <a asp-controller="MatchDetails" asp-action="Index" asp-route-id="@partita.IdMatch" class="btn btn-info btn-sm">🔍 Dettagli</a>
+
                         </td>
                     </tr>
                 }

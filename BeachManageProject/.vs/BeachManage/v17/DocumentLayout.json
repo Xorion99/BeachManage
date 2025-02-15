@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "D:\\test mvc\\BeachManage\\BeachManageProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\livematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\livematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\views\\matchdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:views\\matchdetails\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\views\\livematch\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:views\\livematch\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\viewmodel\\matchdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:viewmodel\\matchdetailviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\matchdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\matchdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\matchdonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\matchdonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\views\\matchdone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:views\\matchdone\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\matchdonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\matchdonecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\livematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\livematchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\viewmodel\\matchdoneviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\wwwroot\\css\\dashboardstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:wwwroot\\css\\dashboardstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|solutionrelative:controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F7973C49-33A1-46C4-83F3-414A2A0CD3CE}|BeachManage.csproj|d:\\test mvc\\beachmanage\\beachmanageproject\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -90,52 +98,78 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MatchDetailViewModel.cs",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDetailViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MatchDetailViewModel.cs",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDetailViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MatchDetailViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T20:20:50.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\MatchDetails\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\MatchDetails\\Index.cshtml",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\MatchDetails\\Index.cshtml",
+              "RelativeToolTip": "Views\\MatchDetails\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-15T20:20:06.978Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MatchDetailsController.cs",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\MatchDetailsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\MatchDetailsController.cs",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\MatchDetailsController.cs",
+              "RelativeToolTip": "Controllers\\MatchDetailsController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAswBMAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T20:18:57.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "MatchDoneController.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\MatchDoneController.cs",
               "RelativeDocumentMoniker": "Controllers\\MatchDoneController.cs",
               "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\MatchDoneController.cs",
               "RelativeToolTip": "Controllers\\MatchDoneController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAcAAAAkAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T17:27:39.947Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "LiveMatchController.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\LiveMatchController.cs",
               "RelativeDocumentMoniker": "Controllers\\LiveMatchController.cs",
               "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\LiveMatchController.cs",
               "RelativeToolTip": "Controllers\\LiveMatchController.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAmwLIAAAAJAAAA",
+              "ViewState": "AQIAANAAAAAAAAAAAAAAwNgAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T13:19:46.465Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\LiveMatch\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\LiveMatch\\Index.cshtml",
-              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\LiveMatch\\Index.cshtml",
-              "RelativeToolTip": "Views\\LiveMatch\\Index.cshtml",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAAwJEAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T14:21:07.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\MatchDone\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\MatchDone\\Index.cshtml",
               "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\MatchDone\\Index.cshtml",
               "RelativeToolTip": "Views\\MatchDone\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAGAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAABuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-15T17:28:17.514Z",
               "EditorCaption": ""
@@ -143,45 +177,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T17:29:21.678Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MatchDoneViewModel.cs",
-              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDoneViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModel\\MatchDoneViewModel.cs",
-              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDoneViewModel.cs",
-              "RelativeToolTip": "ViewModel\\MatchDoneViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T17:32:38.731Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "NewMatchStyle.css",
-              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\NewMatchStyle.css",
-              "RelativeDocumentMoniker": "wwwroot\\css\\NewMatchStyle.css",
-              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\NewMatchStyle.css",
-              "RelativeToolTip": "wwwroot\\css\\NewMatchStyle.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-15T13:13:22.889Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "DashBoardController.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\DashBoardController.cs",
               "RelativeDocumentMoniker": "Controllers\\DashBoardController.cs",
@@ -194,7 +189,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T17:29:21.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MatchDoneViewModel.cs",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDoneViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MatchDoneViewModel.cs",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchDoneViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MatchDoneViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T17:32:38.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "NewMatchStyle.css",
+              "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\NewMatchStyle.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\NewMatchStyle.css",
+              "ToolTip": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\NewMatchStyle.css",
+              "RelativeToolTip": "wwwroot\\css\\NewMatchStyle.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-15T13:13:22.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Dashboardstyle.css",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\wwwroot\\css\\Dashboardstyle.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\Dashboardstyle.css",
@@ -207,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "MatchViewModel.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\ViewModel\\MatchViewModel.cs",
               "RelativeDocumentMoniker": "ViewModel\\MatchViewModel.cs",
@@ -220,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
@@ -233,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "Match.cs",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Models\\Match.cs",
               "RelativeDocumentMoniker": "Models\\Match.cs",
@@ -246,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
@@ -259,7 +293,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
@@ -272,7 +306,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
@@ -285,7 +319,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
@@ -298,7 +332,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "BeachManage",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\BeachManage.csproj",
               "RelativeDocumentMoniker": "BeachManage.csproj",
@@ -311,7 +345,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\test mvc\\BeachManage\\BeachManageProject\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
