@@ -1,0 +1,74 @@
+﻿@model BeachManage.ViewModel.MatchViewModel
+
+@{
+    ViewData["Title"] = "Partita";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Partita in corso</h2>
+
+    <div class="row mt-4">
+        <div class="col-12 col-md-5 offset-md-1">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    <h4>@Model.Team1.Name</h4>
+                </div>
+                <div class="card-body">
+                    <h5 id="score-team1">Punteggio: @Model.Team1Score</h5>
+                    <div class="btn-group-vertical w-100">
+                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(1, '@Model.GiocatoreTeam1Uno','@Model.PlayerIdUnoTeamUno')">@Model.GiocatoreTeam1Uno</button>
+                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(2, '@Model.GiocatoreTeam1Due','@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-5">
+            <div class="card">
+                <div class="card-header bg-danger text-white">
+                    <h4>@Model.Team2.Name</h4>
+                </div>
+                <div class="card-body">
+                    <h5 id="score-team2">Punteggio: @Model.Team2Score</h5>
+                    <div class="btn-group-vertical w-100">
+                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(3, '@Model.GiocatoreTeam2Uno','@Model.PlayerIdUnoTeamDue')">@Model.GiocatoreTeam2Uno</button>
+                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(4, '@Model.GiocatoreTeam2Due','@Model.PlayerIdDueTeamDue')">@Model.GiocatoreTeam2Due</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <form method="post" asp-action="EndMatch">
+                <button type="submit" class="btn btn-danger btn-lg">Termina Partita</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        
+        function incrementScore(TeamId, playerName, playerId) {
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("IncrementScore")',  // Assicurati che questa sia la route giusta
+                data: { Team: TeamId, MatchId: @Model.MatchId, PlayerId: playerId },
+                success: function (response) {
+                    // Aggiorna il punteggio per la squadra
+                    if (TeamId === 1 || TeamId === 2) {
+                        $('#score-team1').text('Punteggio: ' + response.team1Score);
+                    } else {
+                        $('#score-team2').text('Punteggio: ' + response.team2Score);
+                    }
+                },
+                error: function () {
+                    alert('Errore nel punteggio!');
+                }
+            });
+        }
+    </script>
+}

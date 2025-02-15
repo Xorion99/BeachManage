@@ -56,6 +56,9 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.DateInsert)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP")
                 .HasColumnType("datetime");
+            entity.Property(e => e.End)
+                .HasDefaultValueSql("b'0'")
+                .HasColumnType("bit(1)");
             entity.Property(e => e.MatchDate).HasColumnType("datetime");
             entity.Property(e => e.TeamAid).HasColumnName("TeamAId");
             entity.Property(e => e.TeamBid).HasColumnName("TeamBId");

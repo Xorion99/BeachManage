@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BeachManage.Controllers
 {
-    public class DashBoard : Controller
+    public class DashBoardController : Controller
     {
         // GET: DashBoard
         public ActionResult Index()

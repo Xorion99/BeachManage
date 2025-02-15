@@ -21,6 +21,8 @@ public partial class Match
 
     public DateTime? DateInsert { get; set; }
 
+    public ulong? End { get; set; }
+
     public DateTime? DateDeleteFromApp { get; set; }
 
     public virtual ICollection<Playerstat> Playerstats { get; set; } = new List<Playerstat>();

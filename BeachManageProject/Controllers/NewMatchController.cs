@@ -2,11 +2,11 @@
 using BeachManage.Models;
 using System.Linq;
 
-public class NewMatch : Controller
+public class NewMatchController : Controller
 {
     private readonly ApplicationDbContext _context;
 
-    public NewMatch(ApplicationDbContext context)
+    public NewMatchController(ApplicationDbContext context)
     {
         _context = context;
     }
