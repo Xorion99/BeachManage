@@ -143,7 +143,7 @@ namespace BeachManage.Controllers
         // GET: DashBoard/Details/5
         public ActionResult GetStats(int IdPlayer, int IdMatch)
         {
-            var stats = _context.Stattypes
+            var stats = _context.Stattypes.Where(x => x.Id != 1) //per non mostrare i punti
                                .Select(s => new { s.Id, s.Description })
                                .ToList();
 

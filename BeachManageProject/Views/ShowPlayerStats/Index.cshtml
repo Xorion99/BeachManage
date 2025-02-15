@@ -1,0 +1,92 @@
+﻿@model BeachManage.ViewModel.PlayerStatsViewModel
+
+@{
+    ViewData["Title"] = "Statistiche Giocatore";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center text-primary">📊 Statistiche Giocatore</h2>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-lg p-4">
+                <h3 class="text-center text-info mb-4">Statistiche Dettagliate</h3>
+
+                <table class="table table-striped table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Statistica</th>
+                            <th>Valore Totale</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var statType in Model.Stats)
+                        {
+                            // Sommiamo tutti i valori per quel tipo di statistica
+                            var totalStatValue = Model.PlayerStats
+                                .Where(ps => ps.StatTypeId == statType.Id)  // Filtra solo le statistiche per questo tipo
+                                .Sum(ps => ps.StatValue);  // Somma i valori di StatValue per ogni partita
+
+                            // Se non ci sono statistiche per quel tipo, mettiamo 0
+                            totalStatValue = totalStatValue > 0 ? totalStatValue : 0;
+
+                            <tr class="animated fadeIn">
+                                <td>@statType.Description</td>
+                                <td>@totalStatValue</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Aggiungi uno stile personalizzato per il design -->
+<style>
+    .container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .thead-dark {
+        background-color: #007bff;
+        color: white;
+    }
+
+    table {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .table th, .table td {
+        padding: 12px;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f1f1f1;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #e9ecef;
+    }
+
+    .animated {
+        animation: fadeIn 1s ease-in;
+    }
+
+    /* Animazione Fade-in */
+    keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>

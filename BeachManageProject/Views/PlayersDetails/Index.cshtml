@@ -1,0 +1,27 @@
+﻿@model List<BeachManage.Models.Player>
+
+@{
+    ViewData["Title"] = "Seleziona Giocatore";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">⚽ Seleziona il Giocatore ⚽</h2>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <form method="post" action="@Url.Action("Index", "ShowPlayerStats")">
+                <div class="form-group">
+                    <label for="PlayerId">Seleziona Giocatore</label>
+                    <select id="PlayerId" name="PlayerId" class="form-control">
+                        <option value="">-- Seleziona --</option>
+                        @foreach (var player in Model)
+                        {
+                            <option value="@player.Id">@player.FirstName @player.LastName</option>
+                        }
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Vedi Statistiche</button>
+            </form>
+        </div>
+    </div>
+</div>
