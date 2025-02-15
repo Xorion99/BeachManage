@@ -1,0 +1,36 @@
+﻿@model List<BeachManage.ViewModel.MatchDoneViewModel>
+
+@{
+    ViewData["Title"] = "Partite Terminate";
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">🏐 Partite Terminate</h2>
+
+    <div class="table-responsive">
+        <table class="table table-hover text-center">
+            <thead class="table-dark">
+                <tr>
+                    <th>Squadra 1</th>
+                    <th>Punteggio</th>
+                    <th>Squadra 2</th>
+                    <th>Azioni</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var partita in Model)
+                {
+                    <tr>
+                        @* <td>@partita.MatchDate.ToString("dd/MM/yyyy HH:mm")</td> *@
+                        <td><strong>@partita.NomeSquadra1</strong></td>
+                        <td><span class="badge bg-primary fs-5">@partita.Score1 - @partita.Score2</span></td>
+                        <td><strong>@partita.NomeSquadra2</strong></td>
+                        <td>
+                            <a asp-action="DettagliPartita" asp-route-id="@partita.IdMatch" class="btn btn-info btn-sm">🔍 Dettagli</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

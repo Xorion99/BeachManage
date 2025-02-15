@@ -42,6 +42,7 @@
     <div class="row mt-4">
         <div class="col-12 text-center">
             <form method="post" asp-action="EndMatch">
+                <input type="hidden" name="matchId" value="@Model.MatchId" />
                 <button type="submit" class="btn btn-danger btn-lg">Termina Partita</button>
             </form>
         </div>

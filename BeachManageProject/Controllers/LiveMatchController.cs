@@ -155,11 +155,15 @@ namespace BeachManage.Controllers
         // POST: DashBoard/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult EndMatch(int matchId)
         {
             try
             {
-                return RedirectToAction(nameof(IndexAsync));
+                var match = _context.Matches.Where(x => x.Id == matchId && x.DateDeleteFromApp == null).FirstOrDefault();
+                if(match != null)
+                    match.End = 1;
+                _context.SaveChanges();
+                return RedirectToAction("Index","Dashboard");
             }
             catch
             {
