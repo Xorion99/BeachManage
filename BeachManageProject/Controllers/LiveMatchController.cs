@@ -88,56 +88,67 @@ namespace BeachManage.Controllers
 
         }
 
-
         [HttpPost]
         public IActionResult IncrementScore(int Team, int MatchId, int PlayerId)
         {
-            // Logica per incrementare il punteggio della squadra in base al giocatore
-            var match = _context.Matches.Include(m => m.TeamA).Include(m => m.TeamB)
-                                        .FirstOrDefault(m => m.Id == MatchId); // Assumi che `currentMatchId` sia un valore globale
-            var statisticaPlayer = _context.Playerstats.Where(x => x.PlayerId == PlayerId && x.MatchId == MatchId && x.DateDeleteFromApp == null).FirstOrDefault();
-                
-            if(statisticaPlayer == null) {     
-                var statistica = new Playerstat
-                        {
-                            MatchId = MatchId,
-                            PlayerId = PlayerId,
-                            StatTypeId = 1,
-                            StatValue = 1,
-                            DateInsert = DateTime.Now,
+            var match = _context.Matches
+                                .Include(m => m.TeamA)
+                                .Include(m => m.TeamB)
+                                .FirstOrDefault(m => m.Id == MatchId);
 
+            if (match == null)
+                return BadRequest("Partita non trovata");
 
-                        };
-                        _context.Playerstats.Add(statistica);
+     
+
+            
+       
+            if (Team == 1 || Team == 2)
+            {
+                match.ScoreA++; // Incrementa il punteggio di squadra A
             }
             else
             {
-                statisticaPlayer.StatValue++;
+                match.ScoreB++; // Incrementa il punteggio di squadra B
             }
 
 
-            if (match != null)
-            {
-                if (Team == 1 || Team == 2)
+            if(PlayerId != -1) {
+                var statisticaPlayer = _context.Playerstats.FirstOrDefault(x => x.PlayerId == PlayerId && x.MatchId == MatchId && x.DateDeleteFromApp == null);
+
+
+                if (statisticaPlayer == null)
                 {
-                    match.ScoreA++; // Incrementa il punteggio di squadra A
+                    var statistica = new Playerstat
+                    {
+                        MatchId = MatchId,
+                        PlayerId = PlayerId,
+                        StatTypeId = 1,
+                        StatValue = 1,
+                        DateInsert = DateTime.Now,
+                    };
+                    _context.Playerstats.Add(statistica);
                 }
                 else
                 {
-                    match.ScoreB++; // Incrementa il punteggio di squadra B
+                    statisticaPlayer.StatValue++;
                 }
-
-              
-
-                
-                _context.SaveChanges();
-
-                // Restituisci i nuovi punteggi
-                return Json(new { team1Score = match.ScoreA, team2Score = match.ScoreB });
             }
 
-            return BadRequest("Errore nell'aggiornamento del punteggio");
+
+
+            try
+            {
+                _context.SaveChanges();
+                return Json(new { team1Score = match.ScoreA, team2Score = match.ScoreB });
+            }
+            catch (Exception ex)
+            {
+                
+                return StatusCode(500, "Zio cane errore");
+            }
         }
+
 
 
         // GET: DashBoard/Details/5

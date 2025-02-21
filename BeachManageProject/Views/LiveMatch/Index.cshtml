@@ -17,7 +17,11 @@
                     <h5 id="score-team1">Punteggio: @Model.Team1Score</h5>
                     <div class="btn-group-vertical w-100">
                         <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(1, '@Model.GiocatoreTeam1Uno','@Model.PlayerIdUnoTeamUno')">@Model.GiocatoreTeam1Uno 👊</button>
-                        <button type="button" class="btn btn-success w-100" onclick="incrementScore(2, '@Model.GiocatoreTeam1Due','@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due ⚡</button>
+                        <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(2, '@Model.GiocatoreTeam1Due','@Model.PlayerIdDueTeamUno')">@Model.GiocatoreTeam1Due ⚡</button>
+                        <button type="button" class="btn btn-danger w-100" onclick="incrementScore(1, '-1','-1')">
+                            Errore Avversario
+                        </button>
+
                     </div>
                 </div>
             </div>
@@ -33,6 +37,9 @@
                     <div class="btn-group-vertical w-100">
                         <button type="button" class="btn btn-success w-100 mb-2" onclick="incrementScore(3, '@Model.GiocatoreTeam2Uno','@Model.PlayerIdUnoTeamDue')">@Model.GiocatoreTeam2Uno 💪</button>
                         <button type="button" class="btn btn-success w-100" onclick="incrementScore(4, '@Model.GiocatoreTeam2Due','@Model.PlayerIdDueTeamDue')">@Model.GiocatoreTeam2Due 🔥</button>
+                        <button type="button" class="btn btn-danger w-100 mb-2" onclick="incrementScore(3, '-1','-1')">
+                            Errore Avversario
+                        </button>
                     </div>
                 </div>
             </div>

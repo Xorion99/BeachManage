@@ -40,6 +40,66 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container mt-5">
+        <h2 class="text-center text-primary">📊 Statistiche Giocatore</h2>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card shadow-lg p-4">
+                    <h3 class="text-center text-info mb-4">Statistiche Dettagliate</h3>
+                    <canvas id="statsChart"></canvas>
+                    <div class="legend mt-3 text-center">
+                        @foreach (var statType in Model.Stats)
+                        {
+                            <span class="legend-item" style="color: @GetColor(statType.Id)">
+                                <span class="legend-box" style="background-color: @GetColor(statType.Id)"></span>
+                                @statType.Description
+                            </span>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var ctx = document.getElementById('statsChart').getContext('2d');
+            var statsData = @Html.Raw(Json.Serialize(Model.Stats.Select(statType => new
+            {
+                label = statType.Description,
+                value = Model.PlayerStats.Where(ps => ps.StatTypeId == statType.Id).Sum(ps => ps.StatValue),
+                color = GetColor(statType.Id)
+            })));
+
+            var chart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: statsData.map(s => s.label),
+                    datasets: [{
+                        label: 'Statistiche',
+                        data: statsData.map(s => s.value),
+                        backgroundColor: statsData.map(s => s.color),
+                        borderColor: '#333',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
 </div>
 
 <!-- Aggiungi uno stile personalizzato per il design -->
@@ -89,4 +149,64 @@
             opacity: 1;
         }
     }
+
+    .container {
+        background-color: #f8f9fa;
+        border-radius: 10px;
+    }
+
+    .card {
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    .legend {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .legend-item {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+
+    .legend-box {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px;
+        border-radius: 3px;
+    }
+
+    #statsChart {
+    width: 100% !important; /* Fa sì che il grafico occupi tutta la larghezza disponibile */
+    height: 300px !important; /* Imposta un'altezza fissa per il grafico */
+    max-width: 800px; /* Limita la larghezza massima */
+    margin: 0 auto; /* Centra il grafico orizzontalmente */
+}
+
+/* Aggiungi una regola per ridurre l'altezza su schermi più piccoli */
+media (max-width: 768px) {
+    #statsChart {
+        height: 200px !important; /* Riduce l'altezza sui dispositivi mobili */
+    }
+}
 </style>
+
+@functions {
+    public string GetColor(int statTypeId)
+    {
+        return statTypeId switch
+        {
+            1 => "#28a745", // Verde
+            2 => "#007bff", // Blu
+            3 => "#dc3545", // Rosso
+            4 => "#ffc107", // Giallo
+            5 => "#6f42c1", // Viola
+            _ => "#000000" // Nero di default
+        };
+    }
+}
